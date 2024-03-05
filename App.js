@@ -1,22 +1,23 @@
+import { useState } from "react"
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native';
+import { Stack, useRouter } from "expo-router"
+import "./nativewind-output"
+
+//components
+import { COLORS, icons, SIZES } from "./constants"
+import { NearbyJobs,PopularJobs, ScreenHeaderBtn, welcome } from "./components"
 
 export default function App() {
+  const router = useRouter();
   return (
-    <View style={styles.container}>
+    <SafeAreaView>
       <Text>
         home
       </Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
